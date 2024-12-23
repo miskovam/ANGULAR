@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url(https://i.pinimg.com/736x/04/84/80/048480097c7e2f09fcfcf961df4354a9.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Added rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for a modern look */
+  }
+  
+  button {
+    outline: none;
+    color: white;
+    background-color: #007bff; /* Updated to a standard blue color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+  }
+  
+  button:active {
+    transform: scale(0.95); /* Slight scale effect on click */
+  }
+  
