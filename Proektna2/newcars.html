@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Нови Возила - Продавница за Возила</title>
+  <link rel="stylesheet" href="cars.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="carsjquery.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-dark text-white p-3">
+    <div class="container">
+      <h1>Нови Возила</h1>
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a href="cars.html" class="navbar-brand">Почетна</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="newcars.html" class="nav-link">Нови Возила</a></li>
+            <li class="nav-item"><a href="usedcars.html" class="nav-link">Половни Возила</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- New Cars -->
+  <main class="container mt-5">
+    <h2 class="vehicle-collection-title">КОЛЕКЦИЈА НА НОВИ ВОЗИЛА</h2>
+    <div class="row mt-4">
+      <div class="col-md-4 text-center card">
+        <img src="images/car1.jpg" class="img-fluid" alt="Audi R8 V10">
+        <h3>Audi R8 V10</h3>
+        <p>Цена: 200,000€</p>
+        <p>Година: 2023</p>
+        <p>Километража: 24 000 километри</p>
+        <p>Опис:  Најдобриот луксузен спортски автомобил за 2023 година достапен во повеќе бои кој комбинира елегантен дизајн со неверојатни перформанси. Неговиот моќен V10 мотор и прецизно управување го прават идеален избор за фановите на Аudi.</p>
+        <p></p>
+        <a href="https://www.motor1.com/reviews/623291/2023-audi-r8-gt-rwd-first-drive/" class="btn btn-outline-dark">Рецензии</a>
+        <a href="#test-drive" class="btn btn-outline-danger">Закажи Тест Возење</a>
+      </div>
+      <div class="col-md-4 text-center card">
+        <img src="images/car2.jpg" class="img-fluid" alt="Mercedes-Benz CLE Coupe 300 ">
+        <h3>Mercedes-Benz CLE Coupe</h3>
+        <p>Цена: 60,000€</p>
+        <p>Година: 2024</p>
+        <p>Километража: 28 000 километри</p>
+        <p>Опис: „CLE“  e нова линија во линијата на Mercedes-Benz, која нуди рамнотежа на перформанси, луксуз и врвна технологија како: голем екран на допир и функции за помош на возачот (паркирање преку смартфон). Совршено е прилагоден за фамилии и за возачи кои сакааат долги рути.</p>
+        <a href="https://www.dailyrevs.com/listings/2024-mercedes-benz-cle-coupe-300-4matic-w206" class="btn btn-outline-dark">Рецензии</a>
+        <a href="#test-drive" class="btn btn-outline-danger">Закажи Тест Возење</a>
+      </div>
+      <div class="col-md-4 text-center card">
+        <img src="images/car3.jpg" class="img-fluid" alt="BMW X6 M60i">
+        <h3>BMW X6 M60i</h3>
+        <p>Цена: 90,000€</p>
+        <p>Година: 2024</p>
+        <p>Километража: 30 000 километри</p>
+        <p>Опис: Со динамично управување и напредна технологија ова е еден од најдобрите автомобили на пазарот. Побарувачката се должи и на специфичните бои (магентно-сина) кои не само што привлекуваат внимание, туку и создаваат емотивна врска со потрошувачите. </p>
+        <a href="https://www.caricos.com/cars/b/bmw/2024_bmw_x6_m60i/#5" class="btn btn-outline-dark">Рецензии</a>
+        <a href="#test-drive" class="btn btn-outline-danger">Закажи Тест Возење</a>
+      </div>
+    </div>
+
+    <!-- Test Drive Form -->
+    <div id="test-drive" class="container mt-5">
+    <h2 class="text-center">Закажи тест возење</h2>
+     <form id="testDriveForm" onsubmit="validateTestDriveForm(event)">
+        <div class="form-group">
+          <label for="name">Име:</label>
+          <input type="text" class="form-control" id="name" placeholder="Вашето име" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон:</label>
+          <input type="tel" class="form-control" id="phone" placeholder="Вашиот телефон" required>
+        </div>
+        <div class="text-center">
+        <button type="submit" class="btn btn-outline-info">Закажи</button>
+      </div>
+      </form>
+    </div>
+
+    <!-- Mini Instagram-->
+    <div class="container mt-5">
+      <h2 class="text-center custom-title">Мини Инстаграм</h2>
+      <div class="row">
+          <div class="col-md-4 text-center card">
+              <img src="images/car11.jpg" class="img-fluid" alt="audi-r8">
+              <button class="btn btn-outline-info mt-2 add-comment">Коментар</button>
+              <button class="btn btn-outline-danger mt-2 like-post">Лајк</button>
+              <div id="likes-container">
+                <h4 id="total-likes-audi-r8">Вкупни лајкови: 0</h4>
+            </div>
+              <ul id="comments-audi-r8" class="comments-list"></ul> <!-- Comment list for Audi R8 -->
+            </div>
+          <div class="col-md-4 text-center card">
+              <img src="images/car22.jpg" class="img-fluid" alt="mercedes-benz-cle-coupe">
+              <button class="btn btn-outline-info mt-2 add-comment">Коментар</button>
+              <button class="btn btn-outline-danger mt-2 like-post">Лајк</button>
+              <div id="likes-container">
+                <h4 id="total-likes-mercedes-benz-cle-coupe">Вкупни лајкови: 0</h4>
+            </div>
+              <ul id="comments-mercedes-benz-cle-coupe" class="comments-list"></ul> <!-- Comment list for Mercedes -->
+          </div>
+          <div class="col-md-4 text-center card">
+              <img src="images/car33.jpg" class="img-fluid" alt="bmw-x6-m60i">
+              <button class="btn btn-outline-info mt-2 add-comment">Коментар</button>
+              <button class="btn btn-outline-danger mt-2 like-post">Лајк</button>      
+              <div id="likes-container">
+                <h4 id="total-likes-bmw-x6-m60i">Вкупни лајкови: 0</h4>
+            </div>  
+             <ul id="comments-bmw-x6-m60i" class="comments-list"></ul> <!-- Comment list for BMW -->
+          </div>
+      </div>
+  </div>
+
+  
+    <!-- Survey Form -->
+    <div id="surveyForm" class="container mt-5">
+      <h2>Анкета за импресии</h2>
+      <form id="surveyForm" onsubmit="submitSurvey(event)">
+        <div class="form-group">
+          <label>Какво е вашето искуство со нашата веб-страница?</label>
+          <select class="form-control" id="rating">
+            <option>Одлично</option>
+            <option>Многу добро</option>
+            <option>Добро</option>
+            <option>Задоволително</option>
+            <option>Незадоволително</option>
+          </select> 
+        </div>
+        <div class="form-group">
+          <label>Дополнителен коментар:</label>
+          <textarea class="form-control" id="suggestions" rows="3" placeholder="секаков фидбек е добредојден :)"></textarea>
+        </div>
+        <div class="text-center">
+        <button type="submit" class="btn btn-outline-info">Испрати</button>
+      </form>
+    </div>
+  </main>
+
+ <!-- Footer -->
+ <footer class="bg-dark text-white text-center p-3 mt-5">
+  <ul class="footer-list">
+    <li>&copy; 2024 Продавница за Возила. Сите права се задржани.</li>
+    <li>Телефон: +389 76 699 999</li>
+    <li>Е-пошта: autowelt@mk</li>
+    <li>
+      <a href="https://www.facebook.com/autowelt.mk/" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/explore/locations/1003232934/autowelt/" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+    </li>
+  </ul>
+</footer>
+</body>
+</html>
+
+

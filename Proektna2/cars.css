@@ -1,0 +1,240 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('images/logo.jpg'); 
+}
+
+header,footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+  align-items: center; 
+  background-color: rgba(52, 58, 64, 0.9); 
+  color: white;
+  padding: 10px;}
+
+header h1 {
+  font-size: 1.5em; /* Smaller font size for the header title */
+  margin: 0; 
+}
+
+.navbar .nav-link {
+  font-size: 0.9em; 
+}
+
+.navbar-brand {
+  font-size: 1em; 
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0;
+  justify-content: space-around; 
+  align-items: center; 
+}
+
+.footer-list li {
+  margin: 0 10px; 
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: white; 
+}
+
+
+header p, footer p, header div, footer div {
+  margin: 0 10px;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+/* Banner Styles */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  background-image: url('images/banner.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; 
+  text-align: center;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 0; /* Position the overlay below the content */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1; /* Ensure content is above the overlay */
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.banner-content p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.btn-banner {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ff4d4d; /* Button color */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-banner:hover {
+  background-color: #e63939; 
+}
+
+/* Form Styles */
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ff4d4d; 
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+
+.btn-primary {
+  background-color: #ff4d4d; 
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e63939; 
+}
+
+/* Title Styles */
+.custom-title {
+  font-style: italic;
+  color: #b9d7ef;
+}
+
+/* Vehicle Collection Title */
+.vehicle-collection-title {
+  font-size: 3rem; 
+  font-weight: bold; 
+  color: #ff4d4d;
+  text-transform: uppercase; 
+  margin: 20px 0; 
+  letter-spacing: 3px; 
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); 
+  text-align: center; 
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px; 
+  border-radius: 10px; 
+}
+
+
+/* Card Styles */
+.card {
+  background-color: #fff; 
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: 15px; 
+  margin-bottom: 20px; /* Space below each card */
+}
+
+/* Image(new and used cars) */ 
+.img-fluid {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Form Containers */
+#test-drive, #surveyForm, #login {
+  background-color: rgba(240, 248, 255, 0.8); 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px; 
+  margin: 20px auto; /* Center the form horizontally */
+}
+
+/* Form Title */
+#test-drive h2, #surveyForm h2, #login h2 {
+  color: #ff6b6b; 
+  text-align: center; 
+}
+/* Category Title */
+#vehicle-categories h2 {
+  font-size: 2.5rem; 
+  color: #ff6b6b; 
+  text-align: center; 
+  margin-bottom: 30px;
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  font-family: 'Arial Black', sans-serif; 
+}
+
+/* Card Titles */
+.card h3 {
+  font-size: 1.8rem; 
+  color: #343a40; 
+  margin-bottom: 10px; 
+  font-family: 'Georgia', serif; 
+}
+
+/* Card Text */
+.card p {
+  font-size: 1rem; 
+  color: #495057; 
+  margin-bottom: 20px; 
+}
+.comments-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comments-list li {
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+#likes-container {
+  margin-bottom: 20px;
+  color:#ff4d4d;
+  font-size: 13px;
+  font-weight: bold;
+}
+
