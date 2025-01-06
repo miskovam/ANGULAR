@@ -1,0 +1,17 @@
+<div role="list">
+  <app-comp *ngFor="let drv of vozaci; index as i; first as prv; last as posleden; odd as nepar; even as par;"
+    role="listitem"
+    [vozac]="drv"
+    (click)="onAppView()"
+    [indeks]="i+1"
+    [class.is-first]="prv"
+    [class.is-last]="posleden"
+    [class.is-even]="par"
+    [class.is-odd]="nepar"
+    [attr.aria-label]="'Driver ' + drv?.name + ', index ' + (i+1)"
+    [attr.aria-posinset]="i + 1"
+    [attr.aria-setsize]="vozaci?.length">
+  </app-comp>
+</div>
+
+

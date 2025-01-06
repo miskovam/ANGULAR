@@ -1,0 +1,44 @@
+<div *ngIf="vozac?.name != undefined" [ngClass]="klasi()" role="article" 
+     [attr.aria-labelledby]="'driver-name-' + indeks" 
+     [attr.aria-describedby]="'driver-details-' + indeks">
+    
+    <!-- Наслов со идентификатор за ARIA -->
+    <div id="driver-name-{{indeks}}" role="heading" aria-level="2" [style.text-decoration]="stilovi()">
+        {{indeks + ". " + vozac?.name}}
+    </div>
+
+    <!-- Слика со ARIA -->
+    <ng-template role="alert" aria-live="polite" #noImg>
+        No image available for {{vozac?.name}}
+    </ng-template>
+    <img width="300" *ngIf="vozac?.iconUrl; else noImg"
+         [src]="vozac?.iconUrl"
+         alt="{{vozac?.name}}'s icon image"
+         role="img"
+         [attr.aria-label]="'Icon image for ' + vozac?.name">
+
+    <!-- Опис на возачот -->
+    <div id="driver-details-{{indeks}}">
+        <p>{{vozac?.name}} is part of the {{vozac?.team}} team.</p>
+    </div>
+
+    <!-- Префрлување категории -->
+    <div [ngSwitch]="vozac?.category" role="group" [attr.aria-labelledby]="'category-label-' + indeks">
+        <div id="category-label-{{indeks}}" role="heading" aria-level="3">
+            Category
+        </div>
+        <div *ngSwitchCase="'EXPERT'" aria-live="assertive">EXPERT</div>
+        <div *ngSwitchCase="'LUNATIC'" aria-live="polite">5arda</div>
+        <div *ngSwitchCase="'ASD'" aria-live="polite">Dusicka</div>
+        <div *ngSwitchDefault aria-live="polite">No comment</div>
+    </div>
+
+    <!-- Копче за акција -->
+    <button (click)="onDrvView()" 
+            [attr.aria-label]="'View details for ' + vozac?.name">
+        Klikni me
+    </button>
+</div>
+
+
+   
